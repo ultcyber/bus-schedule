@@ -9,4 +9,4 @@ stopID => ID przystanku autobusowego <br>
 o => nieznany parametr, najczęściej "02" lub "04"<br>
 k => nieznany parametr, najczęściej "B" (stąd "B" jest w funkcjach ustawiony jako default) <br>
 
-Aby strona poprawnie działała należy także dodać obrazek "busik.jpg" do folderu static oraz favico (swoich nie mogę udostępniać publicznie) - zobacz index.html
+Aby strona poprawnie działała należy także dodać obrazek "busik.jpg" do folderu static oraz favicon (swoich nie mogę udostępniać publicznie) - zobacz index.html (busik.jpg) i base.html (favicon)
