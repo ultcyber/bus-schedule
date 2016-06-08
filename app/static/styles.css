@@ -1,0 +1,10 @@
+#bus-img {
+	width: 40%;
+	height: auto;
+}
+table, th, td {
+    border: 1px solid black;
+}
+.detailed {
+	text-align: left;
+}

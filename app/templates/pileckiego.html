@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+      <div class="starter-template">
+  
+  <h4 class="detailed">Szczegółowe odjazdy z przystanku {{ title }}</h4>
+  <div class="row">
+  	
+  	
+	<table class="table responsive">
+       
+       <br>
+       <h4 class="detailed"><b>185</b></h4>
+       {% for hour, minutes in posts_185 | dictsort%}
+       	<tr>
+       		<td><b> {{ hour }} </b></td>
+       		<td class="hidden-lg hidden-md">&nbsp;&nbsp;</td>
+       	 {% for minute in minutes %}
+       		<td> {{ minute }}</td>
+       	 {% endfor %}
+       </tr>
+       {% endfor %}
+    </table>
+    
+  	
+  	
+	<table class="table responsive">
+       <br>
+       <h4 class="detailed"><b>179</b></h4>
+       {% for hour, minutes in posts_179 | dictsort%}
+       	<tr>
+       		<td><b> {{ hour }} </b></td>
+       		<td class="hidden-lg hidden-md">&nbsp;&nbsp;</td>
+       	 {% for minute in minutes %}
+       		<td> {{ minute }}</td>
+       	 {% endfor %}
+       </tr>
+       {% endfor %}
+    </table>
+    
+
+  </div> <!-- /.row -->
+  </div> <!-- /.starter-template -->
+</div><!-- /.container -->
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+      <div class="starter-template">
+        <img id="bus-img" src="/static/busik.jpg">
+          {% for post in posts %}
+          <h3><b><span class="header">Nabliższe odjazdy z przystanku {{post.title}}:</span></b></h3>
+            {% for departure in post.departures %}
+            <h4>  <p>{{departure.bus}} odjeżdża za {{departure.next}}</p></h4>
+            {% endfor %}
+          {% endfor %}
+
+    </div><!-- /.container -->
+{% endblock %}
