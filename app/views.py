@@ -16,9 +16,12 @@ def nextBus(busNum, stopID, o, k="B"):
   ztm_html = soup.find(id="RozkladContent")
 
   nbusreg = re.compile(r'(odjazd za\s)(.*\d+\smin)')
-  next_bus = nbusreg.search(str(ztm_html))
-
-  return { "bus" : busNum, "next" : next_bus.group(2) }
+  try:
+  	next_bus = nbusreg.search(str(ztm_html))
+  	return { "bus" : busNum, "next" : next_bus.group(2) }
+  except AttributeError:
+  	return {"bus" : busNum, "next": "nie kursuje"}
+  
 
 def capture_next():
 	# Create next departure arrays
